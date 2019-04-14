@@ -1,0 +1,60 @@
+﻿<Window x:Class="livecode.wpf.Dialogs.Mini.MiniDefectLogDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:livecode.wpf.Dialogs.Mini"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:viewModels="clr-namespace:livecode.wpf.MVVM.ViewModels"
+        xmlns:filePoint="clr-namespace:livecode.ComponentBase.FilePoint;assembly=livecode.ComponentBase"
+        xmlns:views="clr-namespace:livecode.wpf.MVVM.Views"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        ShowInTaskbar="False"
+        Topmost="True"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        BorderBrush="{StaticResource PrimaryHueMidBrush}"
+        BorderThickness="1"
+        DataContext="{Binding Source={StaticResource PSPFormsVMLocator}, Path=DefectForms}" 
+        d:DataContext="{d:DesignInstance viewModels:DefectFormBrowserViewModel}"
+        
+        Height="470" Width="330" WindowStyle="None">
+    <StackPanel>
+        <materialDesign:ColorZone Mode="PrimaryMid">
+            <DockPanel>
+                <Button DockPanel.Dock="Right" Style="{StaticResource MaterialDesignFlatButton}" Click="Close_Click">
+                    <materialDesign:PackIcon Kind="Close" Foreground="White"></materialDesign:PackIcon>
+                </Button>
+                <Grid>
+                    <materialDesign:PackIcon Kind="Bug" Width="28" Height="28" Margin="2,2,0,0"></materialDesign:PackIcon>
+                    <TextBlock Text="Defect Recording Log" Style="{StaticResource MaterialDesignBody2TextBlock}" VerticalAlignment="Center" Margin="32,6,4,4"></TextBlock>
+                </Grid>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Command="{Binding GoBack}" Style="{StaticResource MaterialDesignFloatingActionButton}" Width="25" Height="25" 
+                    Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                <materialDesign:PackIcon Kind="ArrowLeft"></materialDesign:PackIcon>
+            </Button>
+            <TextBlock Text="{Binding DisplayIndex}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignBody2TextBlock}"></TextBlock>
+            <Button Command="{Binding GoNext}" Style="{StaticResource MaterialDesignFloatingActionButton}" Width="25" Height="25" 
+                    Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                <materialDesign:PackIcon Kind="ArrowRight"></materialDesign:PackIcon>
+            </Button>
+        </StackPanel>
+        
+        <views:DefectLogView Margin="4,4,4,4" DataContext="{Binding SelectedItem}" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+            <Button Content="Discard" Style="{StaticResource MaterialDesignFlatButton}" Margin="5"/>
+            <Button Content="Submit" Margin="5"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

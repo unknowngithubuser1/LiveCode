@@ -1,0 +1,9 @@
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\KaVE.Data.Tools.dll.config
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\KaVE.Data.Tools.dll
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\KaVE.Data.Tools.pdb
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\EntityFramework.dll
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\EntityFramework.xml
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\obj\Debug\KaVE.Data.Tools.dll
+C:\Users\Alireza\Documents\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Data.Tools\obj\Debug\KaVE.Data.Tools.pdb

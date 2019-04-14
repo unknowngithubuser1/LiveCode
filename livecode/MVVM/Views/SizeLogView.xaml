@@ -1,0 +1,150 @@
+﻿<UserControl x:Class="livecode.wpf.MVVM.Views.SizeLogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:livecode.wpf.MVVM.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:viewModels="clr-namespace:livecode.wpf.MVVM.ViewModels"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal" 
+             TextOptions.TextRenderingMode="Auto"        
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance viewModels:SizeFormViewModel}"
+             
+             Height="360" Width="320">
+    <StackPanel>
+        <DockPanel LastChildFill="False" Margin="0,5,0,0">
+            <materialDesign:PackIcon Kind="Calendar"/>
+            <TextBlock Text="{Binding CreationDate, Mode=OneTime}"/>
+            <TextBlock DockPanel.Dock="Right" Text="{Binding CreationTime, Mode=OneTime}"/>
+            <materialDesign:PackIcon Kind="Watch" DockPanel.Dock="Right"/>
+        </DockPanel>
+        <Grid Margin="0,10,0,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Solution:" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding Solution, Mode=OneTime}" VerticalAlignment="Top" Grid.Column="1" FontWeight="Bold" IsReadOnly="True"/>
+        </Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Program:" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding Program, Mode=OneTime}" VerticalAlignment="Top" Grid.Column="1" FontWeight="Bold" IsReadOnly="True"/>
+        </Grid>
+        <materialDesign:Card  Margin="5,15,5,5" Padding="5" materialDesign:ShadowAssist.ShadowDepth="Depth1">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top"/>
+                <Border BorderBrush="Black" BorderThickness="0,1,0,0" VerticalAlignment="Top"/>
+
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Base (B):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Base, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+
+                </Grid>
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Deleted (D):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Deleted, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+
+                </Grid>
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Modified (M):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Modified, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+
+                </Grid>
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Added (A):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Added, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+
+                </Grid>
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reused (R):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Reused}" FontWeight="Bold"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+                    <Button Command="{Binding ResetReused}" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                            Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                        <materialDesign:PackIcon Kind="Reload"/>
+                    </Button>
+
+                </Grid>
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="New &amp; Changed (NC):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding NewAndChanged, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+
+                </Grid>
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Total (T):" VerticalAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                        <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Total, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                        <TextBlock VerticalAlignment="Center">LOC</TextBlock>
+                    </StackPanel>
+
+                </Grid>
+
+            </StackPanel>
+        </materialDesign:Card>
+    </StackPanel>
+</UserControl>

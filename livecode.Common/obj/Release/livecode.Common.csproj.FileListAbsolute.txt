@@ -1,0 +1,4 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.Common\bin\Release\livecode.Common.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.Common\bin\Release\livecode.Common.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.Common\obj\Release\livecode.Common.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.Common\obj\Release\livecode.Common.pdb

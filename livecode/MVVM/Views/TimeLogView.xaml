@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="livecode.wpf.MVVM.Views.TimeLogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:livecode.wpf.MVVM.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:filePoint="clr-namespace:livecode.ComponentBase.FilePoint;assembly=livecode.ComponentBase"
+             xmlns:viewModels="clr-namespace:livecode.wpf.MVVM.ViewModels"
+             xmlns:models="clr-namespace:livecode.wpf.MVVM.Models"
+             mc:Ignorable="d" 
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal" 
+             TextOptions.TextRenderingMode="Auto"        
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DataContext="{d:DesignInstance viewModels:TimeFormViewModel}"
+             Height="500" Width="320"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <DockPanel LastChildFill="False" Margin="0,5,0,0">
+            <materialDesign:PackIcon Kind="Calendar"/>
+            <TextBlock Text="{Binding CreationDate, Mode=OneTime}"/>
+            <TextBlock DockPanel.Dock="Right" Text="{Binding CreationTime, Mode=OneTime}"/>
+            <materialDesign:PackIcon Kind="Watch" DockPanel.Dock="Right"/>
+        </DockPanel>
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Solution:" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding Solution, Mode=OneWay}" VerticalAlignment="Top" Grid.Column="1" FontWeight="Bold" IsReadOnly="True"/>
+        </Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="From:" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding From, Mode=OneTime}" VerticalAlignment="Top" Grid.Column="1" FontWeight="Bold" IsReadOnly="True"/>
+        </Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="To:" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding To, Mode=OneTime}" VerticalAlignment="Top" Grid.Column="1" FontWeight="Bold" IsReadOnly="True"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Duration:" VerticalAlignment="Center"/>
+            <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Duration, Mode=OneTime}" FontWeight="Bold" IsReadOnly="True"/>
+                <TextBlock VerticalAlignment="Center"><Run Text="Minutes"/></TextBlock>
+            </StackPanel>
+
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Interruption:" VerticalAlignment="Center"/>
+            <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal">
+                <TextBox Width="50" TextWrapping="Wrap" Text="{Binding Interruption}" FontWeight="Bold" />
+                <TextBlock VerticalAlignment="Center"><Run Text="Minutes"/></TextBlock>
+            </StackPanel>
+            <Button Command="{Binding ResetInterruption}" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                <materialDesign:PackIcon Kind="Reload"/>
+            </Button>
+
+        </Grid>
+        <materialDesign:Card  Margin="5,15,5,5" Padding="0,0,0,5" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Stretch">
+            <StackPanel Orientation="Vertical">
+                <Expander Header="Activities" IsExpanded="True">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <Grid Margin="0,3,0,0">
+                                <StackPanel>
+                                    <materialDesign:PackIcon  Kind="CodeBraces" HorizontalAlignment="Center" Width="25" Height="25"/>
+                                    <TextBlock Text="Coding"  HorizontalAlignment="Center" Style="{StaticResource MaterialDesignBody2TextBlock}"></TextBlock>
+                                    <StackPanel Margin="0,5,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <TextBox  FontWeight="Bold" Text="{Binding CodingTime}" Margin="8 0 0 0" VerticalAlignment="Center" Width="25"/>
+                                        <Button Command="{Binding ResetCodingTime}" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                                                Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                                            <materialDesign:PackIcon Kind="Reload"/>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+
+                            </Grid>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <Grid Margin="0,3,0,0">
+                                <StackPanel>
+                                    <materialDesign:PackIcon   Kind="TestTube" HorizontalAlignment="Center" Width="25" Height="25"/>
+                                    <TextBlock Text="Testing" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignBody2TextBlock}"/>
+                                    <StackPanel Margin="0,5,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <TextBox FontWeight="Bold"  Text="{Binding TestingTime}" Margin="8 0 0 0" VerticalAlignment="Center" Width="25"/>
+                                        <Button Command="{Binding ResetTestingTime}" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                                                Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                                            <materialDesign:PackIcon Kind="Reload"/>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+
+                            </Grid>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2">
+                            <Grid Margin="0,3,0,0">
+                                <StackPanel>
+                                    <materialDesign:PackIcon   Kind="Bug" HorizontalAlignment="Center" Width="25" Height="25"/>
+                                    <TextBlock  Text="Debugging" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignBody2TextBlock}"/>
+                                    <StackPanel Margin="0,5,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <TextBox FontWeight="Bold"  Text="{Binding DebuggingTime}" Margin="8 0 0 0" VerticalAlignment="Center" Width="25"/>
+                                        <Button Command="{Binding ResetDebuggingTime}" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                                                Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{StaticResource MaterialDesignLightForeground}">
+                                            <materialDesign:PackIcon Kind="Reload"/>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </Expander>
+                <Separator Background="{StaticResource MaterialDesignDarkSeparatorBackground}" Margin="0,10,0,0"></Separator>
+                <Expander Header="Documents" IsExpanded="True">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="120">
+                        <ItemsControl ItemsSource="{Binding Documents}" HorizontalContentAlignment="Stretch">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type models:DocumentActivityModel}">
+                                    <Grid Margin="15,5,0,0">
+                                        <StackPanel Margin="8 0 0 0">
+                                            <TextBlock FontWeight="Bold" Text="{Binding DocumentName}" />
+                                            <TextBlock>
+                                                <TextBlock.Inlines>
+                                                    <Run Text="{Binding ActivityDuration}"></Run>
+                                                    <Run Text="minutes"></Run>
+                                                </TextBlock.Inlines>
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Expander>
+            </StackPanel>
+        </materialDesign:Card>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE13BDC8-BC27-4C0B-82C1-1EB4D0322852}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>livecode.wpf</RootNamespace>
+    <AssemblyName>livecode.wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assisticant, Version=2.3.0.0, Culture=neutral, PublicKeyToken=19e83a8289e31a8f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Assisticant.1.5.2\lib\net45\Assisticant.dll</HintPath>
+    </Reference>
+    <Reference Include="Assisticant.XAML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=19e83a8289e31a8f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Assisticant.1.5.2\lib\net45\Assisticant.XAML.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExtraTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DialogBoxForMaterialDesignToolkitInXaml.1.0.0\lib\net45\ExtraTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaVE.Commons">
+      <HintPath>..\..\..\..\Visual Studio 2013\Projects\csharp-examples-master\KaVE.Examples.Commons\bin\Debug\KaVE.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignXaml.DialogsHelper.1.0.0\lib\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignExtensions, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignExtensions.2.4.0\lib\net45\MaterialDesignExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignXaml.DialogsHelper.1.0.0\lib\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignXaml.DialogsHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignXaml.DialogsHelper.1.0.0\lib\MaterialDesignXaml.DialogsHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2013\Projects\JeyARTBusiness\JAEnterprise\JAEnterprise.Desktop\bin\Debug-With-Server\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Components\App\ProcessHookRequestManager.cs" />
+    <Compile Include="Components\Logs\DBInsertAgent.cs" />
+    <Compile Include="Components\Logs\DBExportAgent.cs" />
+    <Compile Include="Components\Logs\DBQueryAgent.cs" />
+    <Compile Include="Components\Logs\LogAggregator.cs" />
+    <Compile Include="Components\Logs\Models\DocumentTimelineActivity.cs" />
+    <Compile Include="Components\Logs\Models\TimelineActivity.cs" />
+    <Compile Include="Components\Utilities\PSPFormExtensions.cs" />
+    <Compile Include="Converters\BoolInverseConverter.cs" />
+    <Compile Include="Converters\IconKindConverter.cs" />
+    <Compile Include="Converters\IntToVisiblityConverter.cs" />
+    <Compile Include="Dialogs\Mini\MiniSizeLogDialog.xaml.cs">
+      <DependentUpon>MiniSizeLogDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Mini\MiniDefectLogDialog.xaml.cs">
+      <DependentUpon>MiniDefectLogDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Mini\MiniTimeLogDialog.cs" />
+    <Compile Include="Dialogs\Progress\AsyncProgressView.xaml.cs">
+      <DependentUpon>AsyncProgressView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Listeners\KaVEFilesWatcher.cs" />
+    <Compile Include="Listeners\Listener.cs" />
+    <Compile Include="Logs\FileLogger.cs" />
+    <Compile Include="Logs\ILogger.cs" />
+    <Compile Include="Logs\Logger.cs" />
+    <Compile Include="MVVM\Models\DefectFormModel.cs" />
+    <Compile Include="MVVM\Models\DocumentActivityModel.cs" />
+    <Compile Include="MVVM\Models\SizeFormModel.cs" />
+    <Compile Include="MVVM\Models\TimeFormModel.cs" />
+    <Compile Include="MVVM\ViewModels\Locators\ReportsVMLocator.cs" />
+    <Compile Include="MVVM\ViewModels\SizeFormBrowserViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\SizeReportViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\TimeFormBrowserViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\DefectFormBrowserViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\DefectFormViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\SizeFormViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\TimeReportViewModel.cs" />
+    <Compile Include="MVVM\Views\DefectLogView.xaml.cs">
+      <DependentUpon>DefectLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\SizeLogView.xaml.cs">
+      <DependentUpon>SizeLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\SizeReportView.xaml.cs">
+      <DependentUpon>SizeReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\TimeLogView.xaml.cs">
+      <DependentUpon>TimeLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\TimeReportView.xaml.cs">
+      <DependentUpon>TimeReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExitPage.xaml.cs">
+      <DependentUpon>ExitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\AsyncDataDownloadAgent.cs" />
+    <Compile Include="Util\ContentChanger.cs" />
+    <Compile Include="Util\DataExporter.cs" />
+    <Compile Include="Util\DataWiper.cs" />
+    <Compile Include="Util\DisableCloseBehavior.cs" />
+    <Compile Include="Util\IDownloadOperator.cs" />
+    <Compile Include="Util\ListenerStarter.cs" />
+    <Compile Include="Util\ManualPrompter.cs" />
+    <Compile Include="Util\LoadFormData.cs" />
+    <Compile Include="Util\SubmitFormData.cs" />
+    <Compile Include="Util\TextSerializer.cs" />
+    <Compile Include="Util\TypeHelper.cs" />
+    <Compile Include="MVVM\ViewModels\Locators\PSPFormsVMLocator.cs" />
+    <Compile Include="MVVM\ViewModels\TimeFormViewModel.cs" />
+    <Page Include="Dialogs\Mini\MiniSizeLogDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\Mini\MiniTimeLogDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\Mini\MiniDefectLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\Progress\AsyncProgressView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\CodeFile\FileRequestManager.cs" />
+    <Compile Include="Components\App\AppHookRequestManager.cs" />
+    <Compile Include="Components\Registration.cs" />
+    <Compile Include="Components\RequestManager.cs" />
+    <Compile Include="Listeners\ProjectFilesWatcher.cs" />
+    <Compile Include="Listeners\GlobalTimer.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MaterialDesignDefaults.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\Views\DefectLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\SizeLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\SizeReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\TimeLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\TimeReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ComponentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DashboardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ExitPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\ComponentsPage.xaml.cs">
+      <DependentUpon>ComponentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KaVE.Data.Tools\KaVEData.Tools.csproj">
+      <Project>{7add4450-25bd-4297-8018-af7589c18536}</Project>
+      <Name>KaVEData.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\livecode.Common\livecode.Common.csproj">
+      <Project>{92ef508f-003c-4392-ba60-8ce396538fca}</Project>
+      <Name>livecode.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\livecode.ComponentBase\livecode.ComponentBase.csproj">
+      <Project>{3119A880-3509-4AE8-9CDA-DD6B7146A8FD}</Project>
+      <Name>livecode.ComponentBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
+      <Project>{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}</Project>
+      <Name>ManagedWinapi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

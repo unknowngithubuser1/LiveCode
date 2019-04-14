@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KaVEModelStoreContainer" CdmEntityContainer="KaVEEntities">
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.Event)">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="InFileId" ColumnName="InFileId" />
+          <ScalarProperty Name="SequenceId" ColumnName="SequenceId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="TriggeredAt" ColumnName="TriggeredAt" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TriggeredBy" ColumnName="TriggeredBy" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ActiveDocumentName" ColumnName="ActiveDocumentName" />
+          <ScalarProperty Name="ActiveDocumentType" ColumnName="ActiveDocumentType" />
+          <ScalarProperty Name="ActiveWindowCaption" ColumnName="ActiveWindowCaption" />
+          <ScalarProperty Name="ActiveWindowType" ColumnName="ActiveWindowType" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.BuildEvent)">
+        <MappingFragment StoreEntitySet="Events_BuildEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="BuildStatus" ColumnName="BuildStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.CommandEvent)">
+        <MappingFragment StoreEntitySet="Events_CommandEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.DebuggerEvent)">
+        <MappingFragment StoreEntitySet="Events_DebuggerEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.DocumentEvent)">
+        <MappingFragment StoreEntitySet="Events_DocumentEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentAction" ColumnName="DocumentAction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.EditEvent)">
+        <MappingFragment StoreEntitySet="Events_EditEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="NumberOfChanges" ColumnName="NumberOfChanges" />
+          <ScalarProperty Name="SizeOfChanges" ColumnName="SizeOfChanges" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Context" ColumnName="Context" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.ErrorEvent)">
+        <MappingFragment StoreEntitySet="Events_ErrorEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="ErrorContent" ColumnName="ErrorContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.IDEStateEvent)">
+        <MappingFragment StoreEntitySet="Events_IDEStateEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Phase" ColumnName="Phase" />
+          <ScalarProperty Name="OpenDocuments" ColumnName="OpenDocuments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.InfoEvent)">
+        <MappingFragment StoreEntitySet="Events_InfoEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="InfoContent" ColumnName="InfoContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.NavigationEvent)">
+        <MappingFragment StoreEntitySet="Events_NavigationEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="NavigationType" ColumnName="NavigationType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.SolutionEvent)">
+        <MappingFragment StoreEntitySet="Events_SolutionEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.SystemEvent)">
+        <MappingFragment StoreEntitySet="Events_SystemEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.TestEvent)">
+        <MappingFragment StoreEntitySet="Events_TestEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="MethodName" ColumnName="MethodName" />
+          <ScalarProperty Name="TestStatus" ColumnName="TestStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.VersionControlEvent)">
+        <MappingFragment StoreEntitySet="Events_VersionControlEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Solution" ColumnName="Solution" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.WindowEvent)">
+        <MappingFragment StoreEntitySet="Events_WindowEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="Window" ColumnName="Window" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.AppEvent)">
+        <MappingFragment StoreEntitySet="Events_AppEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="ProcessHandle" ColumnName="ProcessHandle" />
+          <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+          <ScalarProperty Name="ProcessPath" ColumnName="ProcessPath" />
+          <ScalarProperty Name="WindowTitle" ColumnName="WindowTitle" />
+          <ScalarProperty Name="AppType" ColumnName="AppType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CommandLine" ColumnName="CommandLine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.ActivityEvent)">
+        <MappingFragment StoreEntitySet="Events_ActivityEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.CodeEvent)">
+        <MappingFragment StoreEntitySet="Events_CodeEvent">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="FullPath" ColumnName="FullPath" />
+          <ScalarProperty Name="Exists" ColumnName="Exists" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessions">
+      <EntityTypeMapping TypeName="IsTypeOf(KaVEModel.Session)">
+        <MappingFragment StoreEntitySet="Sessions">
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="IDESessionId" ColumnName="IDESessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

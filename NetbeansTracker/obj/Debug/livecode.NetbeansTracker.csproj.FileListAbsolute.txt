@@ -1,0 +1,5 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode\bin\Debug\Plugins\livecode.NetbeansTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode\bin\Debug\Plugins\livecode.NetbeansTracker.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\NetbeansTracker\obj\Debug\livecode.NetbeansTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\NetbeansTracker\obj\Debug\livecode.NetbeansTracker.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\NetbeansTracker\obj\Debug\livecode.NetbeansTracker.csprojResolveAssemblyReference.cache

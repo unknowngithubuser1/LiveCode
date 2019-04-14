@@ -1,0 +1,151 @@
+﻿<UserControl x:Class="livecode.wpf.Pages.DashboardPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:livecode.wpf.Pages"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:listeners="clr-namespace:livecode.wpf.Listeners"
+             xmlns:views="clr-namespace:livecode.wpf.MVVM.Views"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <materialDesign:ColorZone  Margin="5"  HorizontalAlignment="Center" VerticalAlignment="Top"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth1" Mode="Standard" Name="_EnabledColorZone">
+
+            <Grid Margin="3" HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="5,0,50,0">
+                    <TextBlock.Inlines>
+                        <Run Text="livecode Realtime support is "></Run>
+                        <Bold>
+                            <Run Text="Disabled"  Name="_EnabledText"></Run>
+                        </Bold>
+                    </TextBlock.Inlines>
+                </TextBlock>
+                <ToggleButton HorizontalAlignment="Right" Margin="0,0,5,0" IsChecked="False" Name="_CheckEnabled" Checked="_Enabled" Unchecked="_Disabled"/>
+            </Grid>
+        </materialDesign:ColorZone>
+        <TextBlock Text="Dashboard" Grid.Row="0" HorizontalAlignment="Left"  Style="{StaticResource MaterialDesignHeadlineTextBlock}"  VerticalAlignment="Top"></TextBlock>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="5"
+                    ToolTip="Fill a defect form"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                    Click="_DefectReportClick">
+                <materialDesign:PackIcon Kind="Bug" Width="35" Height="35"></materialDesign:PackIcon>
+            </Button>
+
+            <materialDesign:PopupBox  Margin="5" Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                      materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                      PopupMode="Click" PlacementMode="BottomAndAlignCentres">
+                <materialDesign:PopupBox.ToggleContent>
+                    <materialDesign:PackIcon Kind="Database" Width="35" Height="35"></materialDesign:PackIcon>
+                </materialDesign:PopupBox.ToggleContent>
+                <materialDesign:ColorZone 
+                    Width="287" 
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1" Mode="PrimaryMid" >
+                    <Grid Margin="5" HorizontalAlignment="Center">
+                        <StackPanel>
+
+                            <Button Margin="5" Width="260" Style="{StaticResource MaterialDesignFlatAccentButton}" Foreground="White" Click="_ExportClick">Export Data</Button>
+                            <Button Margin="5" Width="260" Style="{StaticResource MaterialDesignFlatAccentButton}" Foreground="White" Click="_ClearClick">Clear Database</Button>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:ColorZone>
+
+            </materialDesign:PopupBox>
+
+            <materialDesign:PopupBox  Margin="5" Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                      materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                      PopupMode="Click" PlacementMode="BottomAndAlignCentres">
+                <materialDesign:PopupBox.ToggleContent>
+                    <materialDesign:PackIcon Kind="Timer" Width="35" Height="35"></materialDesign:PackIcon>
+                </materialDesign:PopupBox.ToggleContent>
+                <materialDesign:ColorZone 
+                    Width="287" 
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1" Mode="PrimaryMid" >
+                    <Grid Margin="5" HorizontalAlignment="Center">
+                        <StackPanel>
+                            <TextBlock Text="Time until next prompt:" Style="{StaticResource MaterialDesignBody2TextBlock}" HorizontalAlignment="Center"></TextBlock>
+                            <TextBlock Style="{StaticResource MaterialDesignDisplay2TextBlock}" Margin="0,5,0,0" FontWeight="Light" HorizontalAlignment="Center">
+                                <TextBlock.Inlines>
+                                    <InlineUIContainer>
+                                        <materialDesign:PackIcon Kind="Timer" Width="25" Height="25"></materialDesign:PackIcon>
+                                    </InlineUIContainer>
+                                    <Run Text="-" Name="_TimerText"></Run>
+                                    <Run Text="minutes"></Run>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <Button Margin="5" Width="260" Style="{StaticResource MaterialDesignFlatAccentButton}" Foreground="White" Click="_PromptFormsClick">Let's Do it Now</Button>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:ColorZone>
+
+            </materialDesign:PopupBox>
+
+        </StackPanel>
+
+        <Button VerticalAlignment="Bottom" Grid.Row="2" HorizontalAlignment="Right" Margin="10"
+                Click="_ExitClick"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                >
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon VerticalAlignment="Center" Kind="Close"></materialDesign:PackIcon>
+                <TextBlock Text="Exit livecode" Margin="3,0,0,0"></TextBlock>
+            </StackPanel>
+        </Button>
+
+
+        <materialDesign:Card  Margin="5,15,5,5" Padding="5" Grid.Row="2" materialDesign:ShadowAssist.ShadowDepth="Depth1">
+            <StackPanel>
+                <Expander DataContext="{Binding Source={StaticResource ReportsVMLocator}, Path=TimeReport}"
+                          Expanded="_TimeExpanderExpanded">
+                    <Expander.Header>
+                        <Grid Height="30">
+                            <materialDesign:PackIcon Kind="ChartTimeline" VerticalAlignment="Center"
+                                                     Width="25" Height="25"></materialDesign:PackIcon>
+                            <TextBlock Text="Time Report" VerticalAlignment="Center" FontWeight="SemiBold"
+                                       Margin="30,0,0,0" Style="{StaticResource MaterialDesignHeadlineTextBlock}"></TextBlock>
+
+                            <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}"
+                                    Command="{Binding Reload}">
+                                <materialDesign:PackIcon Kind="Reload"></materialDesign:PackIcon>
+                            </Button>
+                        </Grid>
+                    </Expander.Header>
+                    <views:TimeReportView Margin="0,0,0,5"></views:TimeReportView>
+                </Expander>
+
+                <Border VerticalAlignment="Bottom" BorderThickness="0,0,0,1" BorderBrush="{StaticResource MaterialDesignDivider}"></Border>
+
+                <Expander DataContext="{Binding Source={StaticResource ReportsVMLocator}, Path=SizeReport}"
+                          Expanded="_SizeExpanderExpanded">
+                    <Expander.Header>
+                        <Grid Height="30">
+                            <materialDesign:PackIcon Kind="Counter" VerticalAlignment="Center"
+                                                         Width="25" Height="25"></materialDesign:PackIcon>
+                            <TextBlock Text="Size Report" VerticalAlignment="Center" FontWeight="SemiBold"
+                                           Margin="30,0,0,0" Style="{StaticResource MaterialDesignHeadlineTextBlock}"></TextBlock>
+
+                            <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}"
+                                        Command="{Binding Reload}">
+                                <materialDesign:PackIcon Kind="Reload"></materialDesign:PackIcon>
+                            </Button>
+                        </Grid>
+                    </Expander.Header>
+                    <views:SizeReportView></views:SizeReportView>
+                </Expander>
+
+            </StackPanel>
+
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

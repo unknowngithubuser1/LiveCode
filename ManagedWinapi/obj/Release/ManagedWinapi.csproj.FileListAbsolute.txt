@@ -1,0 +1,9 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\bin\Release\ManagedWinapiNativeHelper.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\bin\Release\ManagedWinapi.XML
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\bin\Release\ManagedWinapi.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\bin\Release\ManagedWinapi.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\obj\Release\ManagedWinapi.Crosshair.resources
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\obj\Release\ManagedWinapi.ShortcutBox.resources
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\obj\Release\ManagedWinapi.csproj.GenerateResource.Cache
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\obj\Release\ManagedWinapi.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\ManagedWinapi\obj\Release\ManagedWinapi.pdb

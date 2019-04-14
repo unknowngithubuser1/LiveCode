@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KaVEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="KaVEModelStoreContainer">
+    <EntitySet Name="Events" EntityType="KaVEModel.Store.Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sessions" EntityType="KaVEModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_BuildEvent" EntityType="KaVEModel.Store.Events_BuildEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_CommandEvent" EntityType="KaVEModel.Store.Events_CommandEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_DebuggerEvent" EntityType="KaVEModel.Store.Events_DebuggerEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_DocumentEvent" EntityType="KaVEModel.Store.Events_DocumentEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_EditEvent" EntityType="KaVEModel.Store.Events_EditEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_ErrorEvent" EntityType="KaVEModel.Store.Events_ErrorEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_IDEStateEvent" EntityType="KaVEModel.Store.Events_IDEStateEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_InfoEvent" EntityType="KaVEModel.Store.Events_InfoEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_NavigationEvent" EntityType="KaVEModel.Store.Events_NavigationEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_SolutionEvent" EntityType="KaVEModel.Store.Events_SolutionEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_SystemEvent" EntityType="KaVEModel.Store.Events_SystemEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_TestEvent" EntityType="KaVEModel.Store.Events_TestEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_VersionControlEvent" EntityType="KaVEModel.Store.Events_VersionControlEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_WindowEvent" EntityType="KaVEModel.Store.Events_WindowEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_AppEvent" EntityType="KaVEModel.Store.Events_AppEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_ActivityEvent" EntityType="KaVEModel.Store.Events_ActivityEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_CodeEvent" EntityType="KaVEModel.Store.Events_CodeEvent" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Events_Sessions" Association="KaVEModel.Store.FK_Events_Sessions">
+      <End Role="Session" EntitySet="Sessions" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildEvent_inherits_Event" Association="KaVEModel.Store.FK_BuildEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="BuildEvent" EntitySet="Events_BuildEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommandEvent_inherits_Event" Association="KaVEModel.Store.FK_CommandEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="CommandEvent" EntitySet="Events_CommandEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DebuggerEvent_inherits_Event" Association="KaVEModel.Store.FK_DebuggerEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="DebuggerEvent" EntitySet="Events_DebuggerEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentEvent_inherits_Event" Association="KaVEModel.Store.FK_DocumentEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="DocumentEvent" EntitySet="Events_DocumentEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EditEvent_inherits_Event" Association="KaVEModel.Store.FK_EditEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EditEvent" EntitySet="Events_EditEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ErrorEvent_inherits_Event" Association="KaVEModel.Store.FK_ErrorEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="ErrorEvent" EntitySet="Events_ErrorEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDEStateEvent_inherits_Event" Association="KaVEModel.Store.FK_IDEStateEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="IDEStateEvent" EntitySet="Events_IDEStateEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoEvent_inherits_Event" Association="KaVEModel.Store.FK_InfoEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="InfoEvent" EntitySet="Events_InfoEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NavigationEvent_inherits_Event" Association="KaVEModel.Store.FK_NavigationEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="NavigationEvent" EntitySet="Events_NavigationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolutionEvent_inherits_Event" Association="KaVEModel.Store.FK_SolutionEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="SolutionEvent" EntitySet="Events_SolutionEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemEvent_inherits_Event" Association="KaVEModel.Store.FK_SystemEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="SystemEvent" EntitySet="Events_SystemEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestEvent_inherits_Event" Association="KaVEModel.Store.FK_TestEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="TestEvent" EntitySet="Events_TestEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionControlEvent_inherits_Event" Association="KaVEModel.Store.FK_VersionControlEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="VersionControlEvent" EntitySet="Events_VersionControlEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WindowEvent_inherits_Event" Association="KaVEModel.Store.FK_WindowEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="WindowEvent" EntitySet="Events_WindowEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AppEvent_inherits_Event" Association="KaVEModel.Store.FK_AppEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="AppEvent" EntitySet="Events_AppEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActivityEvent_inherits_Event" Association="KaVEModel.Store.FK_ActivityEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="ActivityEvent" EntitySet="Events_ActivityEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CodeEvent_inherits_Event" Association="KaVEModel.Store.FK_CodeEvent_inherits_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="CodeEvent" EntitySet="Events_CodeEvent" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SessionId" Type="int" Nullable="false" />
+    <Property Name="InFileId" Type="int" Nullable="false" />
+    <Property Name="SequenceId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TriggeredAt" Type="datetime" Nullable="true" />
+    <Property Name="TimeStamp" Type="bigint" Nullable="true" />
+    <Property Name="TriggeredBy" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Duration" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ActiveDocumentName" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="ActiveDocumentType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ActiveWindowCaption" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="ActiveWindowType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Result" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+    </Key>
+    <Property Name="SessionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDESessionId" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Events_BuildEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Project" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="Action" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="BuildStatus" Type="bit" Nullable="true" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_CommandEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="CommandId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_DebuggerEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Mode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Reason" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Action" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_DocumentEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="DocumentName" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="DocumentAction" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_EditEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="NumberOfChanges" Type="int" Nullable="true" />
+    <Property Name="SizeOfChanges" Type="int" Nullable="true" />
+    <Property Name="TypeName" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="Context" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_ErrorEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="ErrorContent" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_IDEStateEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Phase" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OpenDocuments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_InfoEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="InfoContent" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_NavigationEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Location" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Target" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NavigationType" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_SolutionEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Action" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Target" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_SystemEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Action" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_TestEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="MethodName" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="TestStatus" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_VersionControlEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Solution" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="ActionType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_WindowEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="Window" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Action" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_AppEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="ProcessHandle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProcessName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProcessPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="WindowTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AppType" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CommandLine" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_ActivityEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_CodeEvent">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="FullPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Exists" Type="bit" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Events_Sessions">
+    <End Role="Session" Type="KaVEModel.Store.Sessions" Multiplicity="1" />
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="SessionId" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="SessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BuildEvent" Type="KaVEModel.Store.Events_BuildEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="BuildEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommandEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CommandEvent" Type="KaVEModel.Store.Events_CommandEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="CommandEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DebuggerEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DebuggerEvent" Type="KaVEModel.Store.Events_DebuggerEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="DebuggerEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DocumentEvent" Type="KaVEModel.Store.Events_DocumentEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="DocumentEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EditEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EditEvent" Type="KaVEModel.Store.Events_EditEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="EditEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ErrorEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ErrorEvent" Type="KaVEModel.Store.Events_ErrorEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="ErrorEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDEStateEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IDEStateEvent" Type="KaVEModel.Store.Events_IDEStateEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="IDEStateEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InfoEvent" Type="KaVEModel.Store.Events_InfoEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="InfoEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NavigationEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NavigationEvent" Type="KaVEModel.Store.Events_NavigationEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="NavigationEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolutionEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SolutionEvent" Type="KaVEModel.Store.Events_SolutionEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="SolutionEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SystemEvent" Type="KaVEModel.Store.Events_SystemEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="SystemEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TestEvent" Type="KaVEModel.Store.Events_TestEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="TestEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionControlEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VersionControlEvent" Type="KaVEModel.Store.Events_VersionControlEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="VersionControlEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WindowEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WindowEvent" Type="KaVEModel.Store.Events_WindowEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="WindowEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AppEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AppEvent" Type="KaVEModel.Store.Events_AppEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="AppEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActivityEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ActivityEvent" Type="KaVEModel.Store.Events_ActivityEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="ActivityEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CodeEvent_inherits_Event">
+    <End Role="Event" Type="KaVEModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CodeEvent" Type="KaVEModel.Store.Events_CodeEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="CodeEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

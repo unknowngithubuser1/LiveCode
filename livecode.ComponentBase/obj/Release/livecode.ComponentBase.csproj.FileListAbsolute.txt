@@ -1,0 +1,4 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.ComponentBase\bin\Release\livecode.ComponentBase.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.ComponentBase\bin\Release\livecode.ComponentBase.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.ComponentBase\obj\Release\livecode.ComponentBase.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.ComponentBase\obj\Release\livecode.ComponentBase.pdb

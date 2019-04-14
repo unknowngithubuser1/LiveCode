@@ -1,0 +1,5 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode\bin\Debug\Plugins\livecode.IntelliJTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode\bin\Debug\Plugins\livecode.IntelliJTracker.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.IntelliJTracker\obj\Debug\livecode.IntelliJTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.IntelliJTracker\obj\Debug\livecode.IntelliJTracker.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.IntelliJTracker\obj\Debug\livecode.IntelliJTracker.csprojResolveAssemblyReference.cache

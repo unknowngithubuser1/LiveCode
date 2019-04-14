@@ -1,0 +1,7 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\bin\Release\livecode.VisualStudioTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\bin\Release\livecode.VisualStudioTracker.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\bin\Release\livecode.ComponentBase.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\bin\Release\livecode.ComponentBase.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\obj\Release\livecode.VisualStudioTracker.csprojResolveAssemblyReference.cache
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\obj\Release\livecode.VisualStudioTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.VisualStudioTracker\obj\Release\livecode.VisualStudioTracker.pdb

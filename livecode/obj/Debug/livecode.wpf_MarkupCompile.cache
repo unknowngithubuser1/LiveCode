@@ -1,0 +1,20 @@
+﻿livecode.wpf
+
+
+winexe
+C#
+.cs
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode\obj\Debug\
+livecode.wpf
+none
+false
+DEBUG;TRACE
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode\App.xaml
+16693956082
+
+671449946720
+85680860415
+Dialogs\Mini\MiniSizeLogDialog.xaml;Dialogs\Mini\MiniTimeLogDialog.xaml;Dialogs\Mini\MiniDefectLogDialog.xaml;Dialogs\Progress\AsyncProgressView.xaml;MainWindow.xaml;MaterialDesignDefaults.xaml;MVVM\Views\DefectLogView.xaml;MVVM\Views\SizeLogView.xaml;MVVM\Views\SizeReportView.xaml;MVVM\Views\TimeLogView.xaml;MVVM\Views\TimeReportView.xaml;Pages\AboutPage.xaml;Pages\ComponentsPage.xaml;Pages\DashboardPage.xaml;Pages\ExitPage.xaml;Pages\SettingsPage.xaml;
+
+False
+

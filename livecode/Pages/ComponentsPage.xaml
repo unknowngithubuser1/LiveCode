@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="livecode.wpf.Pages.ComponentsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:livecode.wpf.Pages"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:identificationPoint="clr-namespace:livecode.ComponentBase.IdentificationPoint;assembly=livecode.ComponentBase"
+             xmlns:converters="clr-namespace:livecode.wpf.Converters"
+             mc:Ignorable="d" Name="_Control"
+             d:DesignHeight="300" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:IntToVisiblityConverter x:Key="IntToVisiblityConverter"/>
+        <converters:IconKindConverter x:Key="IconKindConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Components" Style="{StaticResource MaterialDesignHeadlineTextBlock}"  VerticalAlignment="Top"></TextBlock>
+        
+        <materialDesign:Card Margin="15,9,15,15" Grid.Row="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden"
+                          MaxWidth="940">
+            <ListBox Height="80" ItemsSource="{Binding ElementName=_Control, Path=Components}"
+                     Name="_ComponentsListBox">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"></StackPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate DataType="identificationPoint:ComponentIdentification">
+                        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="4" Background="Transparent" ToolTip="{Binding Name}">
+                            <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock DockPanel.Dock="Bottom" FontSize="12" Text="{Binding Path=Name, Mode=OneTime}"
+                                           Margin="0,8,0,0" HorizontalAlignment="Center" />
+                                <materialDesign:PackIcon Kind="{Binding IconKind, Converter={StaticResource IconKindConverter}}"
+                                                         Height="32" Width="32"
+                                                         HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </DockPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+                </ScrollViewer>
+        </materialDesign:Card>
+
+        <StackPanel Grid.Row="2" Margin="15" DataContext="{Binding ElementName=_ComponentsListBox, Path=SelectedItem}"
+                    Visibility="{Binding ElementName=_ComponentsListBox, Path=SelectedIndex, Converter={StaticResource IntToVisiblityConverter}}"
+                    d:DataContext="{d:DesignInstance identificationPoint:ComponentIdentification}">
+            <Grid VerticalAlignment="Top">
+                <Border HorizontalAlignment="Left" VerticalAlignment="Top" Padding="4" Background="Transparent" ToolTip="{Binding Name}">
+                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <materialDesign:PackIcon Kind="{Binding IconKind, Converter={StaticResource IconKindConverter}}" Foreground="{StaticResource PrimaryHueMidBrush}"
+                                                 Height="32" Width="32"
+                                                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </DockPanel>
+                </Border>
+
+                <TextBlock Text="{Binding Path=Name}" Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                           Foreground="{StaticResource PrimaryHueMidBrush}"
+                           Margin="42,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            </Grid>
+            <TextBlock Text="{Binding Path=Description}" Margin="42,0,0,0"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

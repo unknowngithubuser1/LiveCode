@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3bacd7043ddc4220b4881e4deada6d20" Name="Diagram1" ZoomLevel="101" ShowGrid="true">
+        <EntityTypeShape EntityType="KaVEModel.BuildEvent" Width="1.5" PointX="43.75" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.CommandEvent" Width="1.5" PointX="19" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.DebuggerEvent" Width="1.5" PointX="25.75" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.DocumentEvent" Width="1.5" PointX="21.25" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.EditEvent" Width="1.5" PointX="41.5" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaVEModel.ErrorEvent" Width="1.5" PointX="48.25" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.Event" Width="1.5" PointX="33.625" PointY="24" />
+        <EntityTypeShape EntityType="KaVEModel.IDEStateEvent" Width="1.5" PointX="37" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.InfoEvent" Width="1.5" PointX="28" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.NavigationEvent" Width="1.5" PointX="46" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.Session" Width="1.5" PointX="20.625" PointY="21.25" />
+        <EntityTypeShape EntityType="KaVEModel.SolutionEvent" Width="1.5" PointX="39.25" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.SystemEvent" Width="1.5" PointX="30.25" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.TestEvent" Width="1.5" PointX="23.5" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.VersionControlEvent" Width="1.5" PointX="34.75" PointY="28.875" />
+        <EntityTypeShape EntityType="KaVEModel.WindowEvent" Width="1.5" PointX="32.5" PointY="28.875" />
+        <AssociationConnector Association="KaVEModel.FK_Events_Sessions" />
+        <InheritanceConnector EntityType="KaVEModel.CommandEvent" />
+        <InheritanceConnector EntityType="KaVEModel.DocumentEvent" />
+        <InheritanceConnector EntityType="KaVEModel.TestEvent" />
+        <InheritanceConnector EntityType="KaVEModel.DebuggerEvent" />
+        <InheritanceConnector EntityType="KaVEModel.InfoEvent" />
+        <InheritanceConnector EntityType="KaVEModel.SystemEvent" />
+        <InheritanceConnector EntityType="KaVEModel.WindowEvent" />
+        <InheritanceConnector EntityType="KaVEModel.VersionControlEvent" />
+        <InheritanceConnector EntityType="KaVEModel.IDEStateEvent" />
+        <InheritanceConnector EntityType="KaVEModel.SolutionEvent" />
+        <InheritanceConnector EntityType="KaVEModel.EditEvent" />
+        <InheritanceConnector EntityType="KaVEModel.BuildEvent" />
+        <InheritanceConnector EntityType="KaVEModel.NavigationEvent" />
+        <InheritanceConnector EntityType="KaVEModel.ErrorEvent" />
+        <InheritanceConnector EntityType="KaVEModel.ErrorEvent" />
+        <InheritanceConnector EntityType="KaVEModel.TestEvent" />
+        <EntityTypeShape EntityType="KaVEModel.AppEvent" Width="1.875" PointX="27.625" PointY="30.875" />
+        <InheritanceConnector EntityType="KaVEModel.AppEvent" />
+        <EntityTypeShape EntityType="KaVEModel.ActivityEvent" Width="1.5" PointX="32.25" PointY="30.875" />
+        <InheritanceConnector EntityType="KaVEModel.ActivityEvent" />
+        <EntityTypeShape EntityType="KaVEModel.CodeEvent" Width="1.5" PointX="34.375" PointY="30.875" />
+        <InheritanceConnector EntityType="KaVEModel.CodeEvent" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,9 @@
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\bin\Release\livecode.CSharpCodeTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\bin\Release\livecode.CSharpCodeTracker.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\bin\Release\DiffPlex.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\bin\Release\livecode.ComponentBase.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\bin\Release\livecode.ComponentBase.pdb
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\bin\Release\DiffPlex.xml
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\obj\Release\livecode.CSharpCodeTracker.csprojResolveAssemblyReference.cache
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\obj\Release\livecode.CSharpCodeTracker.dll
+C:\Users\Alireza\Documents\Visual Studio 2017\Projects\livecode\livecode.CSharpCodeTracker\obj\Release\livecode.CSharpCodeTracker.pdb
